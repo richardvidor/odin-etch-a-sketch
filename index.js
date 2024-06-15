@@ -9,8 +9,13 @@ function setBoardSize(size) {
     for (let i = 0; i < squares; i++) {
         let square = document.createElement('div');
         board.insertAdjacentElement('beforeend', square);
-        square.style.backgroundColor = 'blue';
+        square.style.backgroundColor = 'white';
+
+        square.addEventListener('mouseover', () => {
+            square.style.backgroundColor = 'black';
+        })
     }
 }
+
 
 setBoardSize(64)
